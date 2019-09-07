@@ -1,0 +1,13 @@
+{
+  "name" : "CEDEC2019 expand video",
+  "version" : "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "http://cedec.cesa.or.jp/2019/session/detail/*",
+    "https://cedec.cesa.or.jp/2019/session/detail/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
