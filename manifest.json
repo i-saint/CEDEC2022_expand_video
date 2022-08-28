@@ -1,13 +1,21 @@
 {
-  "name" : "CEDEC2019 expand video",
-  "version" : "1.0",
-  "manifest_version": 2,
+  "name": "CEDEC2022 expand video",
+  "version": "1.0",
+  "manifest_version": 3,
   "permissions": [
     "tabs",
-    "http://cedec.cesa.or.jp/2019/session/detail/*",
-    "https://cedec.cesa.or.jp/2019/session/detail/*"
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://cedec.cesa.or.jp/*"
   ],
   "background": {
-    "scripts": ["background.js"]
-  }
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["https://cedec.cesa.or.jp/*"]
+    }
+  ]
 }
